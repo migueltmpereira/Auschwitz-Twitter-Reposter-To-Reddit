@@ -7,6 +7,7 @@ import time
 # read configs
 
 config = configparser.ConfigParser()
+# Change configFilePath to your filepath, do r'filepath' for it to work
 configFilePath = r'/Users/miguempereira/Documents/Projectos/Auschwitz Twitter Reposter to Reddit/config.ini'
 config.read(configFilePath)
 
@@ -17,7 +18,7 @@ twitter_api_key_secret = config.get('twitter', 'api_key_secret')
 twitter_access_token = config.get('twitter', 'access_token')
 twitter_access_token_secret = config.get('twitter', 'access_token_secret')
 
-reddit_client_id = config.get('reddit', 'client_id')
+reddit_personal_use_script = config.get('reddit', 'personal_use_script')
 reddit_secret_key = config.get('reddit', 'secret_key')
 reddit_password = config.get('reddit', 'password')
 reddit_username = config.get('reddit', 'username')
@@ -29,7 +30,7 @@ twitter_auth.set_access_token(twitter_access_token, twitter_access_token_secret)
 
 twitter_api = tweepy.API(auth)
 """
-reddit = praw.Reddit(client_id = reddit_client_id,
+reddit = praw.Reddit(client_id = reddit_personal_use_script,
                      client_secret= reddit_secret_key,
                      password= reddit_password,
                      username= reddit_username,
