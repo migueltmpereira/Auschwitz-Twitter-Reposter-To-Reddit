@@ -29,11 +29,11 @@ twitter_auth.set_access_token(twitter_access_token, twitter_access_token_secret)
 
 twitter_api = tweepy.API(auth)
 """
-reddit = praw.Reddit(client_id = "RTMW-IBuLSrEfQcuXCRYpQ",
-                     client_secret= "fkWRZ4oKSrRYLRV5syEZCVkzwZ6P0A",
-                     password= "XLqCAVK3!oHgGW4AFHsfd&!3fBCSQu&@",
-                     username= "Holocaust_Memorial",
-                     user_agent="Holocaust Memorial by /u/Holocaust_Memorial"  )
+reddit = praw.Reddit(client_id = reddit_client_id,
+                     client_secret= reddit_secret_key,
+                     password= reddit_password,
+                     username= reddit_username,
+                     user_agent="Holocaust Memorial by /u/Holocaust_Memorial")
 
 print(reddit.user.me())
 
